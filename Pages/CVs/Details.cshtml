@@ -1,0 +1,61 @@
+@page "{id:int?}"
+@model CV.Pages.CVs.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<head>
+    <style>
+        h5{text-align: center;}
+        dd{text-align: center;}
+    </style>
+    <title></title>
+</head>
+
+<h5>stack overflow</h5>
+
+<div>
+   
+    <hr />
+    <dl class="row">
+        
+        @* <dt class="col-sm-2"> *@
+        @*     @Html.DisplayFor *@
+        @* </dt> *@
+        
+        <dd class="col-sm-12">
+            <h1>@Html.DisplayFor(model => model.CvModel.Name)</h1>
+        </dd>
+
+        @* <dt class="col-sm-2"> *@
+        @*     @Html.DisplayNameFor(model => model.CvModel.Profession) *@
+        @* </dt> *@
+
+        <dd class="col-sm-12">
+            <h3>@Html.DisplayFor(model => model.CvModel.Profession)</h3>
+        </dd>
+        @* <dt class="col-sm-12"> *@
+        @*     $1$     @Html.DisplayNameFor(model => model.CvModel.Location) #1# *@
+        @*     @Html.DisplayFor(model => model.CvModel.Location) *@
+        @* </dt> *@
+        @* <dd class="col-sm-12"> *@
+        @*      *@
+        @* </dd> *@
+        @* <dt class="col-sm-2"> *@
+        @*     @Html.DisplayNameFor(model => model.CvModel.SocialMedia) *@
+        @* </dt> *@
+    </dl>
+    <dl class = "row">
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.CvModel.Location)
+        </dd>
+        
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.CvModel.SocialMedia)
+        </dd>
+    </dl>
+</div>
+<div>
+    
+    <a asp-page="./Index">Back to List</a>
+</div>

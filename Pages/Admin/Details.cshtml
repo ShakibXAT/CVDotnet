@@ -1,0 +1,142 @@
+@page "{id:int?}"
+@model CV.Pages.Admin.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<head>
+    <style>
+        h5{text-align: center;}
+        dd{text-align: center;}
+        
+           div.p {
+           
+             margin-top: 100px;
+             margin-bottom: 100px;
+             margin-right: 150px;
+             margin-left: 80px;
+             
+           }
+            div.p2 {
+            border-width:1px;  
+             border-top: 3px solid orange;
+             
+              
+              border-style:solid;
+              margin-top: 10%;
+              margin-bottom: 10%;
+              margin-right: 60%;
+              margin-left: 0px;
+              
+            }
+                div.p3 {
+                        border-width:1px;  
+                         border-top: 3px solid orange;  
+                          border-style:solid;
+                          margin-top: 10%;
+                          margin-bottom: 10%;
+                          margin-right: 0px;
+                          margin-left: 60%;
+                          
+                        }
+                                        
+            div.p4 {
+            border-width:1px;          
+              border-style:solid;
+              margin-top: 10%;
+              margin-bottom: 10%;
+              margin-right: 60%;
+              margin-left: 0px;
+              
+            }
+            
+               div.p5{
+                                  border-width:1px;  
+                             
+                                    border-style:solid;
+                                    margin-top: 10%;
+                                    margin-bottom: 10%;
+                                    margin-right: 0px;
+                                    margin-left: 60%;
+                                    
+                                  }
+                                  vl {
+                                    border-left: 1px solid black;
+                                    height: 40%;
+                                    position: absolute;
+                                    left: 50%;
+                                    margin-left: -3px;
+                                    top: 45%;
+                                  }
+           div.p1{
+           margin-top: 50px;
+           }
+    </style>
+    <title></title>
+</head>
+
+<div class="p1">
+<h5>stack overflow</h5>
+ <hr />
+</div>
+<div class = "p">
+   
+  
+    <dl class="row">
+        
+        @* <dt class="col-sm-2"> *@
+        @*     @Html.DisplayFor *@
+        @* </dt> *@
+        
+        <dd class="col-sm-12">
+            <h1>@Html.DisplayFor(model => model.CvModel.Name)</h1>   <a asp-page="./Edit" asp-route-id="@Model.CvModel.Id">Edit</a> |
+        </dd>
+
+        @* <dt class="col-sm-2"> *@
+        @*     @Html.DisplayNameFor(model => model.CvModel.Profession) *@
+        @* </dt> *@
+
+        <dd class="col-sm-12">
+            <h3>@Html.DisplayFor(model => model.CvModel.Profession)</h3>
+        </dd>
+        @* <dt class="col-sm-12"> *@
+        @*     $1$     @Html.DisplayNameFor(model => model.CvModel.Location) #1# *@
+        @*     @Html.DisplayFor(model => model.CvModel.Location) *@
+        @* </dt> *@
+        @* <dd class="col-sm-12"> *@
+        @*      *@
+        @* </dd> *@
+        @* <dt class="col-sm-2"> *@
+        @*     @Html.DisplayNameFor(model => model.CvModel.SocialMedia) *@
+        @* </dt> *@
+    </dl>
+    <dl class = "row">
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.CvModel.Location)
+        </dd>
+        
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.CvModel.SocialMedia)
+        </dd>
+    </dl>
+    
+</div>    
+<div>
+    <vl></vl>
+    <div class="p2">
+        <h2>hello world</h2>
+    </div>
+    <div class="p3">
+        <h2>hello world</h2>
+    </div>
+    <div class="p4">
+        <h2>hello world</h2>
+    </div>
+    <div class="p5">
+        <h2>hello world</h2>
+    </div>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CvModel.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
